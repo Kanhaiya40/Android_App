@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Demo_Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_fragment">Settings Fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="task_manager_fragment">Task Manager Fragment</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="photo">Photo</string>
+    <string name="name">name</string>
+</resources>
