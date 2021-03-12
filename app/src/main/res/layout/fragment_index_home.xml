@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TaskManger">
+    android:background="@color/white"
+    tools:context=".IndexHomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/photos_fragment"
+        android:text="@string/home_fragment"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textSize="30sp"/>
