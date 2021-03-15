@@ -16,4 +16,13 @@
     <string name="close">Close</string>
     <string name="photos_fragment">Photos Fragment</string>
     <string name="search">Search</string>
+    <string name="sports_name">Sports Name</string>
+    <string name="todo">TODO</string>
+    <string name="navigation_setting_fragment">Navigation Setting Fragment</string>
+    <string name="ataching_image">Ataching Image</string>
+    <string name="attaching_image">Attaching Image</string>
+    <string name="navigation_home_fragment">Navigation Home Fragment</string>
+    <string name="navigation_photo_fragment">Navigation Photo Fragment</string>
+    <string name="navigation_settings_fragment">Navigation Settings Fragment</string>
+    <string name="photo_fragment">Photo Fragment</string>
 </resources>

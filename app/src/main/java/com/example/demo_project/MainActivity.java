@@ -3,7 +3,6 @@ package com.example.demo_project;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.settings) {
             fragment = new SettingsFragment();
         } else if (item.getItemId() == R.id.photo) {
-            fragment = new TaskManger();
+            fragment = new PhotoFragment();
         }
         assert fragment != null;
         getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, fragment).commit();
@@ -35,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.extra_menu,menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.extra_menu, menu);
         return true;
     }
 
@@ -45,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navmenu);
+        NavigationView navigationView = findViewById(R.id.navmenu);
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        drawerLayout = findViewById(R.id.drawer);
 
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -59,13 +58,13 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(item -> {
             Fragment fragment = null;
             if (item.getItemId() == R.id.hom) {
-                fragment = new IndexHomeFragment();
+                fragment = new NavHomeFragment();
                 drawerLayout.closeDrawer(GravityCompat.START);
             } else if (item.getItemId() == R.id.settings) {
-                fragment = new SettingsFragment();
+                fragment = new NavSettingsFragment();
                 drawerLayout.closeDrawer(GravityCompat.START);
             } else if (item.getItemId() == R.id.photo) {
-                fragment = new TaskManger();
+                fragment = new NavPhotoFragment();
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
             assert fragment != null;
