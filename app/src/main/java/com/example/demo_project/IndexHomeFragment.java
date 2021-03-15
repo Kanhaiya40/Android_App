@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
 import java.util.TimerTask;
 
 public class IndexHomeFragment extends Fragment {
@@ -58,16 +59,23 @@ public class IndexHomeFragment extends Fragment {
 
         viewPager.setAdapter(new SliderAdapter(images));
 
-        //Timer timer=new Timer();
-        //timer.scheduleAtFixedRate(new AutoSlider(),2000,4000);
+        init();
 
 
         return view;
     }
 
+    private synchronized void init() {
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new AutoSlider(), 2000, 4000);
+    }
+
     public class AutoSlider extends TimerTask {
         @Override
         public void run() {
+            if (getActivity()==null){
+                return;
+            }
             getActivity().runOnUiThread(() -> {
                 if (viewPager.getCurrentItem() == 0) {
                     viewPager.setCurrentItem(1);
