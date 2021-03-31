@@ -73,7 +73,7 @@ public class IndexHomeFragment extends Fragment {
     public class AutoSlider extends TimerTask {
         @Override
         public void run() {
-            if (getActivity()==null){
+            if (getActivity() == null) {
                 return;
             }
             getActivity().runOnUiThread(() -> {
